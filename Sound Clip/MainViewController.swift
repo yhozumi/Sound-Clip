@@ -13,12 +13,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      let circle = CircularView(frame: CGRect(origin: self.view.center, size: CGSize(width: 50, height: 50)), color: .black())
+      view.addSubview(circle)
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
   
 }

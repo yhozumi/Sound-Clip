@@ -13,8 +13,8 @@ protocol CircularViewDelegate {
 }
 
 class CircularView: UIView {
-  var radius: CGFloat?
-  var color: UIColor?
+  private var radius: CGFloat?
+  private var color: UIColor?
   
   var delegate: CircularViewDelegate?
   
@@ -22,6 +22,7 @@ class CircularView: UIView {
     self.init(frame: frame)
     self.radius = frame.size.width / 2
     self.color = color
+    configureCircularView(radius: radius!, color: color)
   }
   
   override init(frame: CGRect) {
@@ -30,6 +31,17 @@ class CircularView: UIView {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  //configures the circular view's properties
+  private func configureCircularView(radius: CGFloat, color: UIColor) {
+    self.backgroundColor = color
+    self.layer.cornerRadius = radius
+  }
+  
+  deinit {
+    //set the delegate to nil since that this delegate is not weak reference
+    delegate = nil
   }
 }
 

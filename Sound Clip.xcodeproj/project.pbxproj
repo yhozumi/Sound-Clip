@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BA8375AE1D3AB4890068EAC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8375AD1D3AB4890068EAC7 /* AppDelegate.swift */; };
-		BA8375B01D3AB4890068EAC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8375AF1D3AB4890068EAC7 /* ViewController.swift */; };
 		BA8375B31D3AB4890068EAC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8375B11D3AB4890068EAC7 /* Main.storyboard */; };
 		BA8375B51D3AB4890068EAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8375B41D3AB4890068EAC7 /* Assets.xcassets */; };
 		BA8375B81D3AB4890068EAC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8375B61D3AB4890068EAC7 /* LaunchScreen.storyboard */; };
 		BA8375C31D3AB48A0068EAC7 /* Sound_ClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8375C21D3AB48A0068EAC7 /* Sound_ClipTests.swift */; };
 		BA8375CE1D3AB48A0068EAC7 /* Sound_ClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8375CD1D3AB48A0068EAC7 /* Sound_ClipUITests.swift */; };
+		BA8375E11D3AB5EE0068EAC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8375E01D3AB5EE0068EAC7 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		BA8375AA1D3AB4890068EAC7 /* Sound Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Clip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8375AD1D3AB4890068EAC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA8375AF1D3AB4890068EAC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA8375B21D3AB4890068EAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA8375B41D3AB4890068EAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8375B71D3AB4890068EAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		BA8375C91D3AB48A0068EAC7 /* Sound ClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sound ClipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8375CD1D3AB48A0068EAC7 /* Sound_ClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound_ClipUITests.swift; sourceTree = "<group>"; };
 		BA8375CF1D3AB48A0068EAC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA8375E01D3AB5EE0068EAC7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,11 @@
 		BA8375AC1D3AB4890068EAC7 /* Sound Clip */ = {
 			isa = PBXGroup;
 			children = (
-				BA8375AD1D3AB4890068EAC7 /* AppDelegate.swift */,
-				BA8375AF1D3AB4890068EAC7 /* ViewController.swift */,
-				BA8375B11D3AB4890068EAC7 /* Main.storyboard */,
-				BA8375B41D3AB4890068EAC7 /* Assets.xcassets */,
-				BA8375B61D3AB4890068EAC7 /* LaunchScreen.storyboard */,
-				BA8375B91D3AB4890068EAC7 /* Info.plist */,
+				BA8375DB1D3AB5710068EAC7 /* Model */,
+				BA8375DC1D3AB5790068EAC7 /* View */,
+				BA8375DD1D3AB57E0068EAC7 /* Controller */,
+				BA8375DF1D3AB59D0068EAC7 /* Storyboard */,
+				BA8375DE1D3AB58A0068EAC7 /* Support */,
 			);
 			path = "Sound Clip";
 			sourceTree = "<group>";
@@ -114,7 +113,7 @@
 				BA8375C41D3AB48A0068EAC7 /* Info.plist */,
 			);
 			path = "Sound ClipTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		BA8375CC1D3AB48A0068EAC7 /* Sound ClipUITests */ = {
 			isa = PBXGroup;
@@ -123,6 +122,47 @@
 				BA8375CF1D3AB48A0068EAC7 /* Info.plist */,
 			);
 			path = "Sound ClipUITests";
+			sourceTree = "<group>";
+		};
+		BA8375DB1D3AB5710068EAC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA8375DC1D3AB5790068EAC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BA8375DD1D3AB57E0068EAC7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8375E01D3AB5EE0068EAC7 /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BA8375DE1D3AB58A0068EAC7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BA8375AD1D3AB4890068EAC7 /* AppDelegate.swift */,
+				BA8375B41D3AB4890068EAC7 /* Assets.xcassets */,
+				BA8375B91D3AB4890068EAC7 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		BA8375DF1D3AB59D0068EAC7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BA8375B11D3AB4890068EAC7 /* Main.storyboard */,
+				BA8375B61D3AB4890068EAC7 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8375B01D3AB4890068EAC7 /* ViewController.swift in Sources */,
 				BA8375AE1D3AB4890068EAC7 /* AppDelegate.swift in Sources */,
+				BA8375E11D3AB5EE0068EAC7 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
